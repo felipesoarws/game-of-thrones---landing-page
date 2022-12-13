@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: "Cinzel Decorative", cursive;
+  color: black;
+}
+
+p,
+li,
+a {
+  font-family: "Jost", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: black;
+  position: relative;
+  text-align: center;
+}
+body .menu_mobile {
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  max-width: 250px;
+  transition: all 0.3s ease-in-out;
+}
+body .menu_mobile.active {
+  right: 0;
+}
+body .menu_mobile_nav {
+  padding: 2rem;
+  margin: 8.5rem 0;
+}
+body .menu_mobile_nav nav {
+  list-style-type: none;
+}
+body .menu_mobile_nav nav li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+body header {
+  height: 100vh;
+  padding: 2rem;
+  background: url(../assets/header_mobile.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  body header {
+    background: url(../assets/header_desktop.jpg);
+    background-size: cover;
+    background-position: top center;
+  }
+}
+body header .header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .header__menu__logo img {
+  width: 6rem;
+}
+body header .header__menu__hamb {
+  display: block;
+  visibility: visible;
+  z-index: 1000;
+}
+@media screen and (min-width: 1024px) {
+  body header .header__menu__hamb {
+    display: none;
+    visibility: hidden;
+  }
+}
+body header .header__menu__hamb .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+body header .header__menu__hamb .icon.active span.first {
+  transform: rotate(45deg) translate(2px, 5px);
+}
+body header .header__menu__hamb .icon.active span.scnd {
+  transform: rotate(45deg) translate(-2px, 0px);
+}
+body header .header__menu__hamb .icon.active span.third {
+  transform: rotate(-45deg) translateY(-0.4rem) translateX(0.3rem);
+}
+body header .header__menu__hamb .icon span {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  height: 0.1rem;
+  width: 2rem;
+  background-color: #e5e5e5;
+  color: white;
+}
+body header .menu_desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 2rem;
+  height: 100vh;
+  top: 12rem;
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 1024px) {
+  body header .menu_desktop {
+    display: block;
+    visibility: visible;
+  }
+}
+body header .menu_desktop .menu_desktop_item {
+  cursor: pointer;
+}
+body header .menu_desktop .menu_desktop_item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body header .menu_desktop .menu_desktop_item a:hover h1 {
+  color: white;
+}
+body header .menu_desktop .menu_desktop_item a:hover span {
+  background-color: white;
+}
+body header .menu_desktop .menu_desktop_item h1 {
+  color: rgba(229, 229, 229, 0.5);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
+}
+body header .menu_desktop .menu_desktop_item span {
+  display: block;
+  width: 0.1rem;
+  height: 5rem;
+  background-color: rgba(229, 229, 229, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+body main .main__about {
+  padding: 4rem 0;
+  background: url(../assets/about_screen.webp);
+  background-size: cover;
+  background-position: top center;
+}
+body main .main__about h1 {
+  font-size: 2rem;
+  margin: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  body main .main__about h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .main__about h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+}
+body main .main__about .main__about__secs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  body main .main__about .main__about__secs {
+    flex-direction: row;
+    margin: 4rem;
+  }
+}
+body main .main__about .main__about__secs section {
+  padding: 1rem 1.2rem;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 0.8rem;
+  border-radius: 0.3rem;
+  text-align: left;
+  max-width: 40rem;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  body main .main__about .main__about__secs section {
+    width: 70rem;
+  }
+  body main .main__about .main__about__secs section.first {
+    transform: translateY(-3rem);
+  }
+  body main .main__about .main__about__secs section.scnd {
+    height: 37rem;
+    transform: translateY(3rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  body main .main__about .main__about__secs section {
+    width: 32vw;
+  }
+}
+body main .main__about .main__about__secs section p {
+  color: black;
+  margin: 1rem 0;
+}
+body main .main__about .main__about__secs section img {
+  filter: drop-shadow(1px 1px black);
+  opacity: 0;
+  position: absolute;
+  bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  body main .main__about .main__about__secs section img {
+    width: 5rem;
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1150px) {
+  body main .main__about .main__about__secs section img {
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  body main .main__about .main__about__secs section img {
+    width: 8rem;
+  }
+}
+body main .main__plot {
+  background-color: #e5e5e5;
+  padding: 0 2rem;
+}
+@media screen and (min-width: 1024px) {
+  body main .main__plot {
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .main__plot {
+    padding: 4rem 8rem;
+  }
+}
+body main .main__plot h1 {
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  body main .main__plot h1 {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .main__plot h1 {
+    font-size: 4rem;
+  }
+}
+body main .main__plot__seasons .season {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+@media screen and (min-width: 768px) {
+  body main .main__plot__seasons .season .context,
+body main .main__plot__seasons .season .bg {
+    width: 50%;
+    text-align: left;
+  }
+}
+body main .main__plot__seasons .season .context h2 {
+  margin: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  body main .main__plot__seasons .season .context h2 {
+    font-size: 2rem;
+  }
+}
+body main .main__plot__seasons .season .context p {
+  color: black;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 768px) {
+  body main .main__plot__seasons .season {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .main__plot__seasons .season {
+    gap: 6rem;
+  }
+}
+body main .main__plot__seasons img {
+  display: none;
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  body main .main__plot__seasons img {
+    display: block;
+    visibility: visible;
+    height: 40rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.3rem;
+  }
+}/*# sourceMappingURL=main.css.map */
