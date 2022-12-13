@@ -1,2 +1,2 @@
-# game-of-thrones---landing-page
+# Game of Thrones | Landing Page
 A Game of Thrones's Landing Page
